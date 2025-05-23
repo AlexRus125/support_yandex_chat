@@ -1,0 +1,57 @@
+Скрипты для решения 2-го задания
+
+
+
+
+a) Ники клиентов, которые поставили csat < 3
+
+
+(SELECT ticket_client FROM tickets WHERE csat < 3)  скрипт для выполнения задания
+
+
+б) айди тикетов у которых есть слово "отлично" в предложении
+
+
+(SELECT ticket_id FROM tickets WHERE text LIKE '%отлично%' ORDER BY DESC)   скрипт
+
+
+
+в) Долго писать, не хочу
+
+Скрипт
+
+(SELECT orders.order_client_id AS frequent_customer,
+MAX(o.price) AS max_sum
+FROM orders o
+WHERE o.place IN ('Теремок', 'Вкусно и точка') AND o.pice BETWEEN 2000 AND 10000
+GROUP BY o.order_client_id
+HAVING COUNT(o.order_id) > 5)
+
+
+
+г)
+
+
+(SELECT
+o.*,
+c.client_id,
+c.username,
+c.name,
+c.age,
+c.city,
+t.ticket_id,
+t.csat,
+t.text,
+t.date,
+FROM orders o
+LEFT JOIN clients c ON o.order_client_id = c.client_id
+LEFT JOIN tickets t ON o.order_id = t.ticket_order_id
+LIMIT 1000)
+
+
+
+
+
+
+
+
