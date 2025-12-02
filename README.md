@@ -17,8 +17,9 @@
 
 
 
-
-![Version](https://img.shields.io/github/v/release/username/repo)
-![Python](https://img.shields.io/pypi/v/package-name)
+![Python Version](https://img.shields.io/badge/python-3.11-blue)
+![Django Version](https://img.shields.io/badge/django-5.2-green)
+![Stars](https://img.shields.io/github/stars/AlexRus125/support_yandex_chat)
+![Forks](https://img.shields.io/github/forks/AlexRus125/support_yandex_chat)
 
 
