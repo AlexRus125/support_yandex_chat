@@ -18,6 +18,7 @@
 
 
 
-
+![Version](https://img.shields.io/github/v/release/username/repo)
+![Python](https://img.shields.io/pypi/v/package-name)
 
 
